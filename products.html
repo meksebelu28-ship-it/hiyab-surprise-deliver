@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Products | Hiyab Surprise Deliver</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html">🎁 Hiyab <span>Surprise Deliver</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a class="active" href="products.html">Products</a>
+      <a href="about.html">About Us</a>
+    </nav>
+    <a class="cart-link" href="#product-grid">🛒 Cart <span id="cart-count">0</span></a>
+  </header>
+
+  <main class="section products-section">
+    <p class="eyebrow">A GIFT FOR EVERY OCCASION</p>
+    <h1>Our Products</h1>
+    <p>Discover gifts, fresh food and special items for your loved ones in Eritrea.</p>
+
+    <div class="product-controls">
+      <input id="product-search" type="search" placeholder="Search gifts, perfume, vegetables...">
+      <select id="category-filter">
+        <option value="all">All Categories</option>
+        <option value="Meat">Meat & Livestock</option>
+        <option value="Food">Food & Eggs</option>
+        <option value="Flowers">Flowers</option>
+        <option value="Cakes & Bakery">Cakes & Bakery</option>
+        <option value="Vegetables">Vegetables</option>
+        <option value="Perfume">Perfume</option>
+        <option value="Gifts">Gift Packages</option>
+      </select>
+    </div>
+
+    <p id="product-status" role="status">Loading products...</p>
+    <div class="product-grid" id="product-grid"></div>
+    <p id="no-products" hidden>No products found. Try another search.</p>
+
+    <section class="cart-section">
+      <h2>Your Shopping Cart</h2>
+      <div id="cart-items">Your cart is empty.</div>
+      <p class="cart-total">Total: $<span id="cart-total">0.00</span></p>
+      <p class="small-note">Prices are examples and must be confirmed before an order is placed.</p>
+    </section>
+  </main>
+
+  <footer>© 2026 Hiyab Surprise Deliver · Sending love to Eritrea ❤️</footer>
+
+  <button class="ai-toggle" id="ai-toggle" aria-label="Open AI assistant">💬</button>
+  <section class="ai-panel" id="ai-panel" hidden>
+    <div class="ai-header">
+      <div><strong>Hiyab AI Assistant</strong><small>English · ትግርኛ</small></div>
+      <button id="ai-close" aria-label="Close assistant">×</button>
+    </div>
+    <div class="ai-messages" id="ai-messages">
+      <div class="bot-message">Hello! Welcome to Hiyab Surprise Deliver. ❤️ What are you looking for?</div>
+    </div>
+    <form class="ai-form" id="ai-form">
+      <input id="ai-input" maxlength="2000" placeholder="Ask me anything..." required>
+      <button type="submit">➤</button>
+    </form>
+  </section>
+</body>
+</html>
