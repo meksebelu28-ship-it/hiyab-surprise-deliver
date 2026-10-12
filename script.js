@@ -1,4 +1,4 @@
-
+const API_BASE_URL = "https://hiyab-surprise-deliver.onrender.com";
 const $ = (selector) => document.querySelector(selector);
 
 const cartKey = "hiyab-cart";
@@ -113,9 +113,11 @@ async function loadProducts() {
     }
 
     try {
-      const response = await fetch(`/api/products?${params}`, {
-        cache: "no-store"
-      });
+    const response = await fetch(
+  `${API_BASE_URL}/api/products?${params}`,
+  { cache: "no-store" }
+);
+
 
       if (!response.ok) throw new Error("Products request failed");
 
@@ -231,7 +233,7 @@ function setupAI() {
     const waiting = addMessage("One moment, please...", "bot");
 
     try {
-      const response = await fetch("/api/chat", {
+      const response = await fetch(`${API_BASE_URL}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message })
